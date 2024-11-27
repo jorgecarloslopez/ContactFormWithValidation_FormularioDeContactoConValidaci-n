@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hiii</title>
+  </head>
+  <body>
+    <form id="contactForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+      <small class="error" id="nameError"></small>
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required />
+      <small class="error" id="emailError"></small>
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+      <small class="error" id="messageError"></small>
+
+      <button type="submit">Enviar</button>
+      <small id="successMessage" style="color: rgb(2, 0, 128)"></small>
+    </form>
+  </body>
+</html>
