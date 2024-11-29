@@ -11,4 +11,15 @@ document
     document.getElementById("emailError").textContent = "";
     document.getElementById("messageError").textContent = "";
     document.getElementById("successMessage").textContent = "";
+
+    let isValid = true;
+    if (name === "") {
+      document.getElementById("nameError").textContent =
+        "El nombre es obligatorio.";
+      isValid = false;
+    } else if (name.length < 3) {
+      document.getElementById("nameError").textContent =
+        "El nombre debe tener al menos 3 caracteres.";
+      isValid = false;
+    }
   });
