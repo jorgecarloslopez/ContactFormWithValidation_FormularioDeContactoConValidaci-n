@@ -23,6 +23,17 @@ document
       isValid = false;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+      document.getElementById("emailError").textContent =
+        "El correo electrónico es obligatorio.";
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("emailError").textContent =
+        "Ingresa un correo electrónico válido.";
+      isValid = false;
+    }
+
     if (isValid) {
       document.getElementById("successMessage").textContent =
         "Formulario enviado con éxito.";
