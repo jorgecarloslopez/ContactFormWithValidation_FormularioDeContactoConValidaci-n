@@ -34,6 +34,16 @@ document
       isValid = false;
     }
 
+    if (message === "") {
+      document.getElementById("messageError").textContent =
+        "El mensaje no puede estar vacío.";
+      isValid = false;
+    } else if (message.length < 10) {
+      document.getElementById("messageError").textContent =
+        "El mensaje debe tener al menos 10 caracteres.";
+      isValid = false;
+    }
+
     if (isValid) {
       document.getElementById("successMessage").textContent =
         "Formulario enviado con éxito.";
