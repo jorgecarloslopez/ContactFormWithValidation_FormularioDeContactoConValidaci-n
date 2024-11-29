@@ -22,4 +22,10 @@ document
         "El nombre debe tener al menos 3 caracteres.";
       isValid = false;
     }
+
+    if (isValid) {
+      document.getElementById("successMessage").textContent =
+        "Formulario enviado con éxito.";
+      this.reset();
+    }
   });
